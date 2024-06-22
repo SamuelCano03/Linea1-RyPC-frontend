@@ -22,7 +22,7 @@ body {
   margin: 50px auto;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.303);
   border-radius: 8px;
 }
 
@@ -40,6 +40,18 @@ button:hover {
 }
 .button-container {
   display: flex;
-  justify-content: center; /* Center the button horizontally */
+  justify-content: space-around; /* Center the button horizontally */
   align-items: center; /* Center the button vertically */
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }

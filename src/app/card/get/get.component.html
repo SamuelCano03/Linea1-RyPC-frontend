@@ -1,0 +1,9 @@
+<div class="">
+    <h1 style="margin-left: 2rem;">Estas son tus tarjetas y su saldo correspondiente</h1>
+    <div class="button-container">
+        <button routerLink="..">Volver</button>
+    </div>
+    <div *ngFor="let card of cards">
+        <app-cards [card]="card"></app-cards>
+    </div>
+</div>

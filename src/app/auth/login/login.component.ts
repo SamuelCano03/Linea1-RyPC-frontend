@@ -19,21 +19,6 @@ import { Component } from '@angular/core';
       </form>
     </div>
   `,
-  styles: [`
-
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-    input {
-      width: calc(100% - 22px);
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    
-  `]
+  styles: [``]
 })
 export class LoginComponent { }
