@@ -1,0 +1,9 @@
+<div class="">
+    <h1 style="margin-left: 2rem;">Estos son tus cupones. Canjéalos antes de que se venzan 👀</h1>
+    <div class="button-container">
+        <button routerLink="..">Volver</button>
+    </div>
+    <div *ngFor="let coupon of coupons">
+        <app-coupons [coupon]="coupon" ></app-coupons>
+    </div>
+</div>

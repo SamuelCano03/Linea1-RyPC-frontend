@@ -3,17 +3,14 @@ li {
     margin: 3rem;
     width: 100%;
 }
-a{
-    color: black;
-}
 .litem {
-    background-color: greenyellow;
+    background-color:#007bff;
     border-radius: 20px;
     padding: 1rem;
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 .litem:hover {
-    background-color: rgb(109, 163, 0);
+    background-color: #0056b3;
 }

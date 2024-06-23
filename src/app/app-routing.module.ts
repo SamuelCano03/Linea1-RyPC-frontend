@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'core', loadChildren: () => import('./core/core.module').then(m => m.CoreModule) }, 
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'card', loadChildren: () => import('./card/card.module').then(m => m.CardModule) },
+  { path: 'coupon', loadChildren: () => import('./coupon/coupon.module').then(m => m.CouponModule) },
 ];
 
 @NgModule({
