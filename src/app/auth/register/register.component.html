@@ -1,6 +1,6 @@
 <div class="container">
     <h2>Register</h2>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="signUp()">
         <label for="email">Nombre:</label>
         <input type="text" id="name" name="name">
         
@@ -21,8 +21,9 @@
         <input type="password" id="confirm-password" name="confirm-password">
 
         <p><a href="auth/login">Already have an account? Log in</a></p>
+
         <div class="button-container">
-            <button type="submit">Register</button>
+            <button type="submit" mat-raised-button [disabled]="!form.valid">Register</button>
         </div>
     </form>
 </div>

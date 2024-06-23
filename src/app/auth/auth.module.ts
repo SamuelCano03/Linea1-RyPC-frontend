@@ -6,6 +6,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LogoutComponent } from './logout/logout.component';
 import { VerifyComponent } from './verify/verify.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,9 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }

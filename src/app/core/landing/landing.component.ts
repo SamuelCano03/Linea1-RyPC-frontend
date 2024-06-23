@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
         <p>
             <a href="#" class="button">Get Started</a>
         </p>
-        <img src="card.jpg" alt="">
+        <img src="assets/card.jpg" alt="">
     </div>
   `,
   styles: `

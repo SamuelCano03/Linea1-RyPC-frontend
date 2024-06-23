@@ -4,8 +4,8 @@ import { LandingComponent } from './core/landing/landing.component';
 import { HomeComponent } from './core/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'landing', component: LandingComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '', component: LandingComponent },
   { path: 'core', loadChildren: () => import('./core/core.module').then(m => m.CoreModule) }, 
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
   { path: 'card', loadChildren: () => import('./card/card.module').then(m => m.CardModule) },
