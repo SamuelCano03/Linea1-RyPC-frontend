@@ -8,6 +8,7 @@ import { CouponsComponent } from './coupons/coupons.component';
 import { AddComponent } from './add/add.component';
 import { DeleteComponent } from './delete/delete.component';
 import { ActivateComponent } from './activate/activate.component';
+import { ReactiveFormsModule, } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ActivateComponent } from './activate/activate.component';
   ],
   imports: [
     CommonModule,
-    CouponRoutingModule
+    CouponRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CouponModule { }

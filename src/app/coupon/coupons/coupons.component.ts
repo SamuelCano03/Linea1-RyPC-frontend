@@ -10,8 +10,10 @@ import { Component, Input } from '@angular/core';
         {{ coupon.discountValue }}
         {{ coupon.type === 'FIXED_DISCOUNT' ? 'soles menos' : '% menos en tu próxima recarga' }}
       </h3>
-      <p>Fecha de inicio: {{ coupon.startDate }}</p>
-      <p>Fecha de expiración: {{ coupon.expirationDate }}</p>
+      <p>Fecha de inicio: {{ coupon.startDate}}</p>
+      <p>Fecha de expiración: {{ coupon.expirationDate}}</p>
+      <p>Usos restantes: {{ coupon.maxUsageCount}}</p>
+      <p> Activado: {{ coupon.active}}</p>
     </div>
   `,
   styles: [``]

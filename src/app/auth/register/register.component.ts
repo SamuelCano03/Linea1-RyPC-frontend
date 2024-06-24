@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterRequestDTO } from '../interfaces/auth.interface';
@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './register.component.html',
   styles: []
 })
-export class RegisterComponent { 
+export class RegisterComponent implements OnInit{ 
   form: FormGroup;
   passwordVisible = false;
 
@@ -29,7 +29,7 @@ export class RegisterComponent {
       password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
-
+  ngOnInit(): void { }
   controlHasError(controlName: string, errorName: string): boolean {
     return this.form.controls[controlName].hasError(errorName);
   }
@@ -37,14 +37,24 @@ export class RegisterComponent {
     if (this.form.invalid) {
       return;
     }
-    const registerRequest: RegisterRequestDTO = this.form.value as RegisterRequestDTO;
+    const registerRequest = {
+      firstname: this.form.value.firstname,
+      lastname: this.form.value.lastname,
+      dni: this.form.value.dni,
+      email: this.form.value.email,
+      password: this.form.value.password
+    }
 
-    this.signUpService.signup(registerRequest).subscribe(
-      () => {
+    this.signUpService.signup(registerRequest).subscribe({
+      next:() => {
         this.showSnackBar('Usuario registrado correctamente');
         this.router.navigate(['/auth/login'])
-      }
-    );
+      },
+      error: (err) => {
+        console.error('Error en el registro:', err.message);
+        this.showSnackBar(err.message);
+      },
+  });
   }
   
   

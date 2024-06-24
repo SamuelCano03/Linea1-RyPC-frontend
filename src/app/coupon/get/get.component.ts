@@ -1,10 +1,7 @@
 import { Component, Input } from '@angular/core';
-
-let mycoupons =[
-  {"code": "5%OFFQ", "type": "FIXED_DISCOUNT", "discountValue": 20, "startDate": "2021-01-01", "expirationDate": "2021-12-31", "description": "asdf", "quantity": 2},
-  {"code": "ASD123", "type": "PERCENTAGE_DISCOUNT", "discountValue": 5, "startDate": "2021-01-01", "expirationDate": "2021-12-31", "description": "asdf", "quantity": 2},
-  {"code": "20$FDS", "type": "PERCENTAGE_DISCOUNT", "discountValue": 10, "startDate": "2021-01-01", "expirationDate": "2021-12-31", "description": "asdf", "quantity": 2},
-]
+import { CouponService } from '../services/coupon.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CouponResponseDTO } from '../interfaces/coupon.interface';
 
 @Component({
   selector: 'app-get',
@@ -13,5 +10,15 @@ let mycoupons =[
 })
 export class GetComponent {
   // @Input() cards: any;
-  coupons = mycoupons;
+  coupons: CouponResponseDTO[] = [];
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private couponService: CouponService
+  ){}
+  ngOnInit(): void {
+    this.couponService.getAllCoupons().subscribe((data: CouponResponseDTO[]) => {
+      this.coupons = data;
+    });
+  }
 }

@@ -16,7 +16,7 @@ export class SignUpService {
 
   
   signup(signupRequest: RegisterRequestDTO) {
-    const url = `${this.baseUrl}/users/signup`;
+    const url = `${this.baseUrl}/auth/register`;
     return this.http.post<UserProfileDTO>(url, signupRequest);    
   }
 

@@ -6,6 +6,7 @@ import { RechargeComponent } from './recharge.component';
 import { ViaCardComponent } from './via-card/via-card.component';
 import { HistoryComponent } from './history/history.component';
 import { TransactionComponent } from './transaction/transaction.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { TransactionComponent } from './transaction/transaction.component';
   ],
   imports: [
     CommonModule,
-    RechargeRoutingModule
+    RechargeRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class RechargeModule { }

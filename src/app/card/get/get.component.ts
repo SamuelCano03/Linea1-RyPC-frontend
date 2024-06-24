@@ -1,14 +1,7 @@
 import { Component, Input } from '@angular/core';
-
-let mycards = [
-  {"saldo": 1000, "cardId": "1234 5678 9012 3456"},
-  {"saldo": 1000, "cardId": "1234 5678 9012 3456"},
-  {"saldo": 1000, "cardId": "1234 5678 9012 3456"},
-  {"saldo": 1000, "cardId": "1234 5678 9012 3456"},
-  {"saldo": 1000, "cardId": "1234 5678 9012 3456"},
-  {"saldo": 1000, "cardId": "1234 5678 9012 3456"},
-  {"saldo": 1000, "cardId": "1234 5678 9012 3456"},
-]
+import { CardDetailsDTO } from '../interfaces/card.interface';
+import { CardService } from '../services/card.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-get',
@@ -17,5 +10,15 @@ let mycards = [
 })
 export class GetComponent {
   // @Input() cards: any;
-  cards = mycards;
+  cards: CardDetailsDTO[] = [];
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private cardService: CardService
+  ){}
+  ngOnInit(): void {
+    this.cardService.getAllCards().subscribe((data: CardDetailsDTO[]) => {
+      this.cards = data;
+    });
+  }
 }
