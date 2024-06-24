@@ -9,7 +9,7 @@ import { UnlinkComponent } from './unlink/unlink.component';
 const routes: Routes = [
   { path: '', component: CardComponent },
   { path: 'add', component: AddComponent },
-  { path: 'get', component: GetComponent },
+  { path: 'details', component: GetComponent },
   { path: 'block', component: BlockComponent },
   { path: 'unlink', component: UnlinkComponent },
 ];

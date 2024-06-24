@@ -8,6 +8,7 @@ import { GetComponent } from './get/get.component';
 import { BlockComponent } from './block/block.component';
 import { UnlinkComponent } from './unlink/unlink.component';
 import { CardsComponent } from './cards/cards.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CardsComponent } from './cards/cards.component';
   ],
   imports: [
     CommonModule,
-    CardRoutingModule
+    CardRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CardModule { }
