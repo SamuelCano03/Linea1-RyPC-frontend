@@ -63,3 +63,13 @@ export interface UserProfileDTO {
     dni: string;
     role: string;
 }
+
+export interface ResetPassRequestDTO{
+    token: string;
+    newPassword: string;
+}
+
+export interface VerificationRequestDTO{
+    email: string;
+
+}

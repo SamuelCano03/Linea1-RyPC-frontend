@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { LogoutComponent } from './logout/logout.component';
 import { VerifyComponent } from './verify/verify.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { changePasswordComponent } from './changePassword/changePassword.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent},
   { path: 'verify', component: VerifyComponent},
   { path: 'reset-password', component: ResetPasswordComponent},
+  { path: 'changePassword', component: changePasswordComponent},
 ];
 
 @NgModule({

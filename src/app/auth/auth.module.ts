@@ -7,6 +7,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { VerifyComponent } from './verify/verify.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { changePasswordComponent } from './changePassword/changePassword.component';
 
 
 
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     LogoutComponent,
     VerifyComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    changePasswordComponent
   ],
   imports: [
     CommonModule,
